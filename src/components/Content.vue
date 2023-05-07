@@ -6,9 +6,9 @@
         <div class="osg-grid">
             <div class="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
                 <div class="osg-input osg-margin-top-8">
-                    <label class="osg-input__label">
+                    <label class="osg-input__label" id="roman-value-input">
                         Roman Numeral String
-                        <input class="osg-input__input" v-model="romanNumeralValue" ref="romanNumeralValue" type="text" autocomplete="on" placeholder="example: XVI" aria-describedby="required-1">
+                        <input class="osg-input__input" v-model="romanNumeralValue" ref="romanNumeralValue" type="text" autocomplete="roman-numeral" placeholder="example: XVI" aria-describedby="roman-value-input">
                     </label>
                     <div class="osg-input__required">* Required</div>
                     <Error v-show="errorVisible" :error="error" />
@@ -16,7 +16,7 @@
                 </div>
             </div>
         </div>
-        <button type="submit" @click="convertRomanNumeral" class="osg-button osg-margin-top-4">Convert to number</button>   
+        <button type="submit" @click="convertRomanNumeral" class="osg-button osg-margin-top-4" aria-label="Convert Roman Numeral to number">Convert to number</button>   
     </div>
 </template>
 
